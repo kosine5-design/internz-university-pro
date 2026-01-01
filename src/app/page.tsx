@@ -11,6 +11,10 @@ import {
   Download,
   ChevronRight,
   CheckCircle,
+  Sliders,
+  Drum,
+  Mic,
+  Briefcase,
 } from 'lucide-react'
 
 const features = [
@@ -44,22 +48,22 @@ const aiAgents = [
   {
     name: 'Mix Advisor',
     role: 'Get professional feedback on your mixes',
-    icon: '🎹',
+    icon: Sliders,
   },
   {
     name: 'Beat Analyzer',
     role: 'Analyze your beats for arrangement and hit potential',
-    icon: '🥁',
+    icon: Drum,
   },
   {
     name: 'Vocal Producer',
     role: 'Perfect your vocal production and arrangements',
-    icon: '🎤',
+    icon: Mic,
   },
   {
     name: 'Industry Mentor',
     role: 'Navigate the music business with insider knowledge',
-    icon: '💼',
+    icon: Briefcase,
   },
 ]
 
@@ -246,7 +250,9 @@ export default function Home() {
                 key={agent.name}
                 className="bg-[#1f1f1f] border border-[#333] rounded-xl p-6 hover:border-[#F97316] transition-colors"
               >
-                <div className="text-4xl mb-4">{agent.icon}</div>
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#F97316] to-[#D4AF37] flex items-center justify-center mb-4">
+                  <agent.icon className="w-6 h-6 text-[#1A1A1A]" />
+                </div>
                 <h3 className="text-lg font-semibold text-[#FFFEF2] mb-1">
                   {agent.name}
                 </h3>
